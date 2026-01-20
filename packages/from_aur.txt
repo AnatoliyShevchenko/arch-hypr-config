@@ -1,0 +1,4 @@
+google-chrome
+jetbrains-toolbox
+postman-bin
+wlogout

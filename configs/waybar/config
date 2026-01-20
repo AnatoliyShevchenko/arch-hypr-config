@@ -1,0 +1,73 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 10,
+	"margin": "10 10 0 10",
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "hyprland/language", "network", "bluetooth", "pulseaudio", "cpu", "memory", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%d.%m.%Y %H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+
+    "network": {
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}",
+        "on-click": "nm-applet --indicator"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱 {num_connections}",
+        "tooltip-format": "{controller_alias}\n{device_enumerate}",
+        "on-click": "blueman-applet"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "hyprpwcenter"
+    },
+
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 2
+    },
+
+	"memory": {
+	    "format": "󰍛 {used:0.1f}/{total:0.1f}G",
+	    "interval": 2
+	},
+	"custom/power": {
+	    "format": "⏻",
+	    "on-click": "wlogout",
+	    "tooltip": false
+	}
+}
