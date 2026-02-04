@@ -25,7 +25,19 @@ window#waybar {
 #workspaces button:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+#custom-cpu-stats {
+    color: #a6e3a1;
+    padding: 0 10px;
+}
 
+#custom-gpu-stats-nvidia {
+    color: #89b4fa;
+    padding: 0 10px;
+}
+
+#custom-cpu-temp, #custom-gpu-temp {
+    padding: 0 10px;
+}
 #clock,
 #tray,
 #language,

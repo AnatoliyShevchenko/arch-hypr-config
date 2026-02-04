@@ -5,9 +5,9 @@
     "spacing": 10,
 	"margin": "10 10 0 10",
 
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "custom/gpu-stats-nvidia"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "hyprland/language", "network", "bluetooth", "pulseaudio", "cpu", "memory", "custom/power"],
+    "modules-right": ["custom/cpu-stats", "tray", "hyprland/language", "network", "bluetooth", "pulseaudio", "memory", "custom/power"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -19,17 +19,26 @@
         "format-alt": "{:%d.%m.%Y %H:%M}",
         "tooltip-format": "{:%A, %d %B %Y}"
     },
-
+	"custom/cpu-stats": {
+	    "exec": "echo \"$(awk '{printf \"%.1f GHz\", $1/1000000}' /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq) | $(top -bn1 | grep 'Cpu(s)' | awk '{printf \"%.0f%%\", $2+$4}') | $(cat /sys/class/hwmon/hwmon4/temp1_input | awk '{printf \"%.0f°C\", $1/1000}')\"",
+	    "interval": 2,
+	    "format": " {}",
+	    "tooltip": false
+	},
+	"custom/gpu-stats-nvidia": {
+	    "exec": "nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu --format=csv,noheader,nounits | awk '{printf \"%d%% | %dMB/%dMB | %d°C\", $1, $2, $3, $4}'",
+	    "interval": 2,
+	    "format": "🎮 {}",
+	    "tooltip": false
+	},
     "tray": {
         "spacing": 10
     },
-
     "hyprland/language": {
         "format": "{}",
         "format-en": "EN",
         "format-ru": "RU"
     },
-
     "network": {
         "format-wifi": "󰤨",
         "format-ethernet": "󰈀",
@@ -38,7 +47,6 @@
         "tooltip-format-ethernet": "{ifname}: {ipaddr}",
         "on-click": "nm-applet --indicator"
     },
-
     "bluetooth": {
         "format": "󰂯",
         "format-disabled": "󰂲",
@@ -46,7 +54,6 @@
         "tooltip-format": "{controller_alias}\n{device_enumerate}",
         "on-click": "blueman-applet"
     },
-
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-muted": "󰝟",
@@ -55,12 +62,6 @@
         },
         "on-click": "hyprpwcenter"
     },
-
-    "cpu": {
-        "format": "󰻠 {usage}%",
-        "interval": 2
-    },
-
 	"memory": {
 	    "format": "󰍛 {used:0.1f}/{total:0.1f}G",
 	    "interval": 2
