@@ -1,4 +1,5 @@
 google-chrome
-jetbrains-toolbox
 postman-bin
+ttf-ms-fonts
+visual-studio-code-bin
 wlogout

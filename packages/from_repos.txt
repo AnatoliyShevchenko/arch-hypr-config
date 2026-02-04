@@ -1,4 +1,5 @@
 7zip
+alsa-utils
 amd-ucode
 base
 base-devel
@@ -40,6 +41,7 @@ linux
 linux-firmware
 micro
 nano
+nautilus
 ncdu
 network-manager-applet
 networkmanager
@@ -56,12 +58,12 @@ postgresql-libs
 resvg
 ripgrep
 snapper
+steam
 telegram-desktop
 ttf-jetbrains-mono
 ttf-meslo-nerd
 udisks2
 unzip
-vim
 waybar
 wireplumber
 yazi
