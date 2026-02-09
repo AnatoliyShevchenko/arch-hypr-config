@@ -58,6 +58,7 @@ postgresql-libs
 resvg
 ripgrep
 snapper
+sof-firmware
 steam
 telegram-desktop
 ttf-jetbrains-mono
@@ -66,6 +67,9 @@ udisks2
 unzip
 waybar
 wireplumber
+wpa_supplicant
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
 yazi
 zip
 zoxide

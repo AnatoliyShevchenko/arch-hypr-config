@@ -1,3 +1,4 @@
+faugus-launcher
 google-chrome
 postman-bin
 ttf-ms-fonts
