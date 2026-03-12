@@ -11,6 +11,9 @@ curl -sSL https://install.python-poetry.org | python3 -
 echo "==> Installing ruff..."
 curl -LsSf https://astral.sh/ruff/install.sh | sh
 
+echo "==> Installing UV..."
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 echo "==> Installing Claude Code..."
 curl -fsSL https://claude.ai/install.sh | bash
 

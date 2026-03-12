@@ -12,6 +12,7 @@ cuda
 dbeaver
 discord
 docker
+docker-buildx
 docker-compose
 efibootmgr
 fd
@@ -38,13 +39,18 @@ kitty
 lazydocker
 libpulse
 linux
+linux-headers
 linux-firmware
+make
+mangohud
 micro
 nano
 nautilus
 ncdu
 network-manager-applet
 networkmanager
+nodejs
+npm
 nvidia-container-toolkit
 nvidia-open
 nvidia-settings

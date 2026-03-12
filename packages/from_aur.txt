@@ -1,6 +1,8 @@
+antigravity
 faugus-launcher
 google-chrome
 postman-bin
 ttf-ms-fonts
 visual-studio-code-bin
+xpadneo-dkms
 wlogout
