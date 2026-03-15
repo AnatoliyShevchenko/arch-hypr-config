@@ -1,0 +1,65 @@
+{
+  "show_edit_predictions": false,
+  "disable_ai": true,
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 18,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_features": {
+    "calt": true,
+  },
+
+  "languages": {
+    "Python": {
+      "language_servers": ["ty", "!basedpyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [{ "language_server": { "name": "ruff" } }],
+    },
+  },
+
+  "lsp": {
+    "ty": {
+      "settings": {
+        "inlayHints": {
+          "variableTypes": false,
+        },
+      },
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 88,
+          "lint": {
+            "extendSelect": ["I"],
+          },
+        },
+      },
+    },
+  },
+
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+  },
+
+  "auto_install_extensions": {
+    "dockerfile": true,
+    "html": true,
+    "jetbrains-new-ui-icons": true,
+    "material-icon-theme": true,
+    "toml": true,
+  },
+}
